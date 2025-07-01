@@ -1,0 +1,4 @@
+name: DrillPickaxe
+version: '1.0.0'
+main: me.tizo.drillPickaxe.DrillPickaxe
+api-version: '1.21'
