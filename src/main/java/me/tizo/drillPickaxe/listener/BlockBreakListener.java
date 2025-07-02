@@ -1,4 +1,4 @@
-package me.tizo.drillPickaxe.events;
+package me.tizo.drillPickaxe.listener;
 
 import me.tizo.drillPickaxe.util.BlockUtils;
 import me.tizo.drillPickaxe.util.ItemUtils;
@@ -16,7 +16,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class BlockBreakHandler implements Listener {
+public class BlockBreakListener implements Listener {
 
     private static final Set<Location> activeBlocksBroken = new HashSet<>();
 
