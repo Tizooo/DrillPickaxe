@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id("xyz.jpenilla.run-paper") version "2.3.1"
+    id 'io.github.goooler.shadow' version '8.1.7'
 }
 
 group = 'me.tizo'
@@ -20,6 +21,11 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
+    implementation 'org.bstats:bstats-bukkit:3.0.2'
+}
+
+shadowJar {
+    relocate("org.bstats", "me.tizo.drillPickaxe.libs.bstats")
 }
 
 tasks {
@@ -56,4 +62,8 @@ processResources {
     filesMatching('plugin.yml') {
         expand props
     }
+}
+
+build {
+    dependsOn(shadowJar)
 }
